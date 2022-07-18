@@ -47,6 +47,28 @@ namespace Bakery.Tests
 
         }
 
+    // PastryTests
+    //
+        [TestMethod]
+        public void PastryCost_CostOneNoDiscount_Int()
+        {
+            int pastryQuantity = 1;
+            double pastryCost = 2;
+
+            Pastry pastryOrder = new Pastry(pastryQuantity);
+
+            Assert.AreEqual(pastryCost, pastryOrder.PastryCost());            
+        }
+
         
+        [TestMethod]
+        public void PastryCost_CostOfTwoLoafDiscounted_Int()
+        {
+            int pastryQuantity = 3;
+            double pastryCost = 5;
+            Pastry pastryOrder = new Pastry(pastryQuantity);
+            Assert.AreEqual(pastryCost, pastryOrder.PastryCost());
+        }
+
     }
 }
