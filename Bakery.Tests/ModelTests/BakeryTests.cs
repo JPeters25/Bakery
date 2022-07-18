@@ -37,6 +37,16 @@ namespace Bakery.Tests
             Assert.AreEqual(breadCost, breadOrder.BreadCost());
         }
 
+        [TestMethod]
+        public void BreadCost_ThirdLoafIsDicountedSixLoafsOrdered_Int()
+        {
+            int breadQuantity = 6;
+            double breadCost = 20;
+            Bread breadOrder = new Bread(breadQuantity);
+            Assert.AreEqual(breadCost, breadOrder.BreadCost());
+
+        }
+
         
     }
 }
